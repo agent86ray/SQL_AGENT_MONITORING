@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{d5896b37-d427-4622-b550-f72fe6b4ad3d}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -57,5 +57,13 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="JobMonitor" />
+    <Folder Include="JobMonitor\Stored Procedures" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Schemas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="JobMonitor\Stored Procedures\CHECK_SQL_AGENT_DAILY_JOB_STATUS.sql" />
+    <Build Include="Security\Schemas\JobMonitor.sql" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [JobMonitor]
+AUTHORIZATION dbo;
+
